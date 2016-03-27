@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory>
+  <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+  <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/fooddhaba</property>
+  <property name="hibernate.connection.username">root</property>
+  <property name="hibernate.connection.password"></property>
+  <property name="hibernate.default_schema">fooddhaba</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+  <property name="hibernate.show_sql">true</property>
+  <property name="current_session_context_class">thread</property> 
+  <property name="hibernate.enable_lazy_load_no_trans">true</property>
+
+  <mapping class="User"  package="com.fooddhaba.foodmarket.model" resource="com/fooddhaba/foodmarket/model/User.hbm.xml"/>
+  <!--  <mapping class="Business"  package="com.fooddhaba.foodmarket.model" resource="com/fooddhaba/foodmarket/model/Business.hbm.xml"/>
+  <mapping class="BusinessRoles"  package="com.fooddhaba.foodmarket.model" resource="com/fooddhaba/foodmarket/model/BusinessRoles.hbm.xml"/>
+  <mapping class="BusinessRolesResponsibilityMapping"  package="com.fooddhaba.foodmarket.model" resource="com/fooddhaba/foodmarket/model/BusinessRolesResponsibilityMapping.hbm.xml"/>
+  
+  <mapping class="BusinessTypeMapping"  package="com.fooddhaba.foodmarket.model" resource="com/fooddhaba/foodmarket/model/BusinessTypeMapping.hbm.xml"/>
+  <mapping class="BusinessUserMapping"  package="com.fooddhaba.foodmarket.model" resource="com/fooddhaba/foodmarket/model/BusinessUserMapping.hbm.xml"/> -->
+  <mapping class="BusinessType"  package="com.fooddhaba.foodmarket.model" resource="com/fooddhaba/foodmarket/model/BusinessType.hbm.xml"/>
+  <mapping class="FDRole"  package="com.fooddhaba.foodmarket.model" resource="com/fooddhaba/foodmarket/model/FDRole.hbm.xml"/>
+    <mapping class="FDRoleResponsibilityMapping"  package="com.fooddhaba.foodmarket.model" resource="com/fooddhaba/foodmarket/model/FDRoleResponsibilityMapping.hbm.xml"/>
+    <mapping class="Responsibility"  package="com.fooddhaba.foodmarket.model" resource="com/fooddhaba/foodmarket/model/Responsibility.hbm.xml"/>
+   <mapping class="Menu"  package="com.fooddhaba.foodmarket.model" resource="com/fooddhaba/foodmarket/model/Menu.hbm.xml"/>
+    <mapping class="ResponsibilityMenuMapping"  package="com.fooddhaba.foodmarket.model" resource="com/fooddhaba/foodmarket/model/ResponsibilityMenuMapping.hbm.xml"/>
+  <!--
+  <mapping class="ResponsibilityGroup"  package="com.fooddhaba.foodmarket.model" resource="com/fooddhaba/foodmarket/model/ResponsibilityGroup.hbm.xml"/>
+ 
+  <mapping class="RoleResponsibilityGroup"  package="com.fooddhaba.foodmarket.model" resource="com/fooddhaba/foodmarket/model/RoleResponsibilityGroup.hbm.xml"/> -->
+  <mapping class="Status"  package="com.fooddhaba.foodmarket.model" resource="com/fooddhaba/foodmarket/model/Status.hbm.xml"/>
+ <!--   <mapping class="StatusGroup"  package="com.fooddhaba.foodmarket.model" resource="com/fooddhaba/foodmarket/model/StatusGroup.hbm.xml"/> -->
+ 
+ <mapping class="City"  package="com.fooddhaba.foodmarket.model" resource="com/fooddhaba/foodmarket/model/City.hbm.xml"/>
+ <mapping class="Country"  package="com.fooddhaba.foodmarket.model" resource="com/fooddhaba/foodmarket/model/Country.hbm.xml"/>
+ <mapping class="State"  package="com.fooddhaba.foodmarket.model" resource="com/fooddhaba/foodmarket/model/State.hbm.xml"/>
+ <mapping class="Gender"  package="com.fooddhaba.foodmarket.model" resource="com/fooddhaba/foodmarket/model/Gender.hbm.xml"/>
+ <mapping class="UserSession"  package="com.fooddhaba.foodmarket.model" resource="com/fooddhaba/foodmarket/model/UserSession.hbm.xml"/>
+ 
+ <mapping class="BusinessEnquiry"  package="com.fooddhaba.foodmarket.model" resource="com/fooddhaba/foodmarket/model/BusinessEnquiry.hbm.xml"/>
+   
+ </session-factory>
+</hibernate-configuration>

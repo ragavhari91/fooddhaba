@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27 Mar, 2016 4:21:50 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.fooddhaba.foodmarket.model.User" table="USER">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="first_name" type="java.lang.String">
+            <column name="FIRST_NAME" />
+        </property>
+        <property name="last_name" type="java.lang.String">
+            <column name="LAST_NAME" />
+        </property>
+        <property name="initial" type="java.lang.String">
+            <column name="INITIAL" />
+        </property>
+        <property name="gender_id" type="int">
+            <column name="GENDER_ID" />
+        </property>
+        <many-to-one name="gender" class="com.fooddhaba.foodmarket.model.Gender" fetch="join">
+            <column name="GENDER" />
+        </many-to-one>
+        <property name="date_of_birth" type="java.util.Date">
+            <column name="DATE_OF_BIRTH" />
+        </property>
+        <property name="email_address" type="java.lang.String">
+            <column name="EMAIL_ADDRESS" />
+        </property>
+        <property name="mobile_no" type="java.lang.String">
+            <column name="MOBILE_NO" />
+        </property>
+        <property name="password" type="java.lang.String">
+            <column name="PASSWORD" />
+        </property>
+        <property name="address_line1" type="java.lang.String">
+            <column name="ADDRESS_LINE1" />
+        </property>
+        <property name="address_line2" type="java.lang.String">
+            <column name="ADDRESS_LINE2" />
+        </property>
+        <property name="address_line3" type="java.lang.String">
+            <column name="ADDRESS_LINE3" />
+        </property>
+        <property name="city_id" type="int">
+            <column name="CITY_ID" />
+        </property>
+        <many-to-one name="city" class="com.fooddhaba.foodmarket.model.City" fetch="join">
+            <column name="CITY" />
+        </many-to-one>
+        <property name="state_id" type="int">
+            <column name="STATE_ID" />
+        </property>
+        <many-to-one name="state" class="com.fooddhaba.foodmarket.model.State" fetch="join">
+            <column name="STATE" />
+        </many-to-one>
+        <property name="country_id" type="int">
+            <column name="COUNTRY_ID" />
+        </property>
+        <many-to-one name="country" class="com.fooddhaba.foodmarket.model.Country" fetch="join">
+            <column name="COUNTRY" />
+        </many-to-one>
+        <property name="fdrole_id" type="int">
+            <column name="FDROLE_ID" />
+        </property>
+        <many-to-one name="fdRole" class="com.fooddhaba.foodmarket.model.FDRole" fetch="join">
+            <column name="FDROLE" />
+        </many-to-one>
+        <property name="status_id" type="int">
+            <column name="STATUS_ID" />
+        </property>
+        <many-to-one name="status" class="com.fooddhaba.foodmarket.model.Status" fetch="join">
+            <column name="STATUS" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

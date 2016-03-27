@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27 Mar, 2016 4:21:50 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.fooddhaba.foodmarket.model.BusinessEnquiry" table="BUSINESS_ENQUIRY">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="NAME" />
+        </property>
+        <property name="email_id" type="java.lang.String">
+            <column name="EMAIL_ID" />
+        </property>
+        <property name="mobile_no" type="java.lang.String">
+            <column name="MOBILE_NO" />
+        </property>
+        <many-to-one name="business_type" class="com.fooddhaba.foodmarket.model.BusinessType" fetch="join" insert="false" update="false">
+            <column name="BUSINESS_TYPE" />
+        </many-to-one>
+        <property name="business_type_id" type="int">
+            <column name="BUSINESS_TYPE" />
+        </property>
+        <property name="business_name" type="java.lang.String">
+            <column name="BUSINESS_NAME" />
+        </property>
+        <property name="business_address" type="java.lang.String">
+            <column name="BUSINESS_ADDRESS" />
+        </property>
+         <property name="comments" type="java.lang.String">
+            <column name="COMMENTS" />
+        </property>
+        <property name="enquiry_status" type="int">
+            <column name="ENQUIRY_STATUS" />
+        </property>
+    </class>
+</hibernate-mapping>

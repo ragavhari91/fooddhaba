@@ -1,0 +1,27 @@
+{
+    "category":[{
+        "id":1,
+        "name":"Ring"
+    },{
+        "id":2,
+        "name":"Chain"
+    },{
+        "id":3,
+        "name":"Necklace"
+    }],
+    
+    "customer":[
+        {
+            "id":1,
+            "name":"Kumar",
+            "address":"no 14,7th colony",
+            "phoneno":"80808980808"
+        },
+        {
+            "id":2,
+            "name":"Ravi",
+            "address":"no 10.7th street",
+            "phoneno":"789789797"
+        }
+    ]   
+}
