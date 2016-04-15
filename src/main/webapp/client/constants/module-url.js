@@ -27,6 +27,17 @@ var MODULE_USER_REGISTRATION = {
     ]
 };
 
+
+var MODULE_USER_PROFILE = {
+    name:'app',
+    files:[
+        'client/modules/profile/profile.controller.js',
+        'client/modules/profile/profile.directive.js',
+        'client/modules/profile/profile.service.js',
+        'client/modules/profile/profile.test.js'
+    ]
+};
+
 var MODULE_BUSINESS_ENQUIRY = {
     name : 'app',
     files:[

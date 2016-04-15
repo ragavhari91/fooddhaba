@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+import org.hibernate.Criteria;
 import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -177,6 +178,9 @@ public class UserDAOImpl implements IUserDAO
 		
 		String query = "SELECT resp.* FROM Responsibility resp join FD_ROLE_RESPONSIBILITY_MAPPING fdrrm on resp.id = fdrrm.responsibility_id join User u on u.fd_role_id = fdrrm.role_id where u.id = :userid group by resp.id";
 
+		//Criteria criteria = session.createCriteria(Responsibility.class,"resp");
+		//criteria.createAlias("resp.id", arg1)
+		
 		SQLQuery sqlQuery = session.createSQLQuery(query);
 		sqlQuery.setParameter("userid", userID);
 		sqlQuery.addEntity(Responsibility.class);

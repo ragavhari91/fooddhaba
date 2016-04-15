@@ -23,6 +23,8 @@
                 else
                 {
                     $scope.status_message = response.message; 
+                    localStorage.setItem("fd_init",JSON.stringify(response));
+                    $state.go("profile");
                 }
                
             });

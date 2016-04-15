@@ -20,8 +20,8 @@
         <property name="gender_id" type="int">
             <column name="GENDER_ID" />
         </property>
-        <many-to-one name="gender" class="com.fooddhaba.foodmarket.model.Gender" fetch="join">
-            <column name="GENDER" />
+        <many-to-one name="gender" class="com.fooddhaba.foodmarket.model.Gender" fetch="join" insert="false" update="false">
+            <column name="GENDER_ID" />
         </many-to-one>
         <property name="date_of_birth" type="java.util.Date">
             <column name="DATE_OF_BIRTH" />
@@ -47,32 +47,32 @@
         <property name="city_id" type="int">
             <column name="CITY_ID" />
         </property>
-        <many-to-one name="city" class="com.fooddhaba.foodmarket.model.City" fetch="join">
-            <column name="CITY" />
+        <many-to-one name="city" class="com.fooddhaba.foodmarket.model.City" fetch="join" insert="false" update="false">
+            <column name="CITY_ID" />
         </many-to-one>
         <property name="state_id" type="int">
             <column name="STATE_ID" />
         </property>
-        <many-to-one name="state" class="com.fooddhaba.foodmarket.model.State" fetch="join">
-            <column name="STATE" />
+        <many-to-one name="state" class="com.fooddhaba.foodmarket.model.State" fetch="join" insert="false" update="false">
+            <column name="STATE_ID" />
         </many-to-one>
         <property name="country_id" type="int">
             <column name="COUNTRY_ID" />
         </property>
-        <many-to-one name="country" class="com.fooddhaba.foodmarket.model.Country" fetch="join">
-            <column name="COUNTRY" />
+        <many-to-one name="country" class="com.fooddhaba.foodmarket.model.Country" fetch="join" insert="false" update="false">
+            <column name="COUNTRY_ID" />
         </many-to-one>
         <property name="fdrole_id" type="int">
-            <column name="FDROLE_ID" />
+            <column name="FD_ROLE_ID" />
         </property>
-        <many-to-one name="fdRole" class="com.fooddhaba.foodmarket.model.FDRole" fetch="join">
-            <column name="FDROLE" />
+        <many-to-one name="fdRole" class="com.fooddhaba.foodmarket.model.FDRole" fetch="join" insert="false" update="false">
+            <column name="FD_ROLE_ID" />
         </many-to-one>
         <property name="status_id" type="int">
             <column name="STATUS_ID" />
         </property>
-        <many-to-one name="status" class="com.fooddhaba.foodmarket.model.Status" fetch="join">
-            <column name="STATUS" />
+        <many-to-one name="status" class="com.fooddhaba.foodmarket.model.Status" fetch="join" insert="false" update="false">
+            <column name="STATUS_ID" />
         </many-to-one>
     </class>
 </hibernate-mapping>

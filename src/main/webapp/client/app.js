@@ -38,6 +38,16 @@ app.config(function($stateProvider, $urlRouterProvider,$mdThemingProvider,$mdIco
             }
         })
     
+        .state('profile', {
+            url: '/profile',
+            templateUrl: URL_USER_PROFILE,
+            resolve: {
+            loadMyDirectives:function($ocLazyLoad){
+                return $ocLazyLoad.load(MODULE_USER_PROFILE);
+                }
+            }
+        })
+    
         .state('sales', {
             url: '/sales',
             templateUrl: URL_SALES_MAIN,

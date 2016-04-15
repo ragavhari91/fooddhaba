@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 27 Mar, 2016 4:21:50 PM by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
-    <class name="com.fooddhaba.foodmarket.model.FDRole" table="FDROLE">
+    <class name="com.fooddhaba.foodmarket.model.FDRole" table="FD_ROLE">
         <id name="id" type="int">
             <column name="ID" />
             <generator class="assigned" />
